@@ -1,8 +1,8 @@
 import UIKit
 
-class TableViewController: UITableViewController {
+final class TableViewController: UITableViewController {
     
-    
+    let chracterList = Character.allCases
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,13 +10,18 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        print(chracterList.count)
+        return chracterList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = chracterList[indexPath.row].title
+        
+        cell.contentConfiguration = content
+        return cell
     }
 }
