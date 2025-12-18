@@ -1,5 +1,7 @@
 enum Character: CaseIterable {
-    case one, two, three
+    case one
+    case two
+    case three
     
     var title: String {
         switch self {
