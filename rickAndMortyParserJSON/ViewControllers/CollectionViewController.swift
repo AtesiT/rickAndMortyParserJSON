@@ -38,5 +38,8 @@ final class CollectionViewController: UICollectionViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
     
 }
