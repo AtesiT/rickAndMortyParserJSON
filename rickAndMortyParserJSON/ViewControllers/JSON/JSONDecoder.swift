@@ -28,8 +28,19 @@ func fetchData<T:Decodable>(_ type: T.Type, from url: URL, completion: @escaping
         } catch {
             print(error.localizedDescription)
         }
-    }
+    }.resume()
 }
 
 
+func fetchImage(from url: URL, completion: @escaping(Result<Data,DataErrors>) -> Void) {
+    DispatchQueue.global().async {
+        guard let imageData = try? Data(contentsOf: url) else {
+            completion(.failure(.dataError))
+            return
+        }
+        DispatchQueue.main.async {
+            completion(.success(imageData))
+        }
+    }
+}
 
