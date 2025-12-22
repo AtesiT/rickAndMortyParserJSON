@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3E6221082EF9BB740024F2D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3E6221072EF9BB740024F2D7 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3EF9D1D12EF1A04700C6AF84 /* rickAndMortyParserJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rickAndMortyParserJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6221082EF9BB740024F2D7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = rickAndMortyParserJSON;
 			packageProductDependencies = (
+				3E6221072EF9BB740024F2D7 /* Alamofire */,
 			);
 			productName = rickAndMortyParserJSON;
 			productReference = 3EF9D1D12EF1A04700C6AF84 /* rickAndMortyParserJSON.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 3EF9D1C82EF1A04700C6AF84;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3E6221062EF9BB740024F2D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3EF9D1D22EF1A04700C6AF84 /* Products */;
 			projectDirPath = "";
@@ -351,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E6221062EF9BB740024F2D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E6221072EF9BB740024F2D7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E6221062EF9BB740024F2D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EF9D1C92EF1A04700C6AF84 /* Project object */;
 }
