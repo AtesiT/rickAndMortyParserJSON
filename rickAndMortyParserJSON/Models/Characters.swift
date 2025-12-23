@@ -36,9 +36,27 @@ struct CharacterData: Codable {
 
 // MARK: - IT'S TO TEST THE FUNCTION
 
-struct TestStruct: Decodable {
+struct TestStruct: Codable {
     let userId: Int
     let id: Int
     let title: String
     let body: String
+    
+    init(everyData: [String: Any]) {
+        userId = everyData["userId"] as? Int ?? 0
+        id = everyData["id"] as? Int ?? 0
+        title = everyData["title"] as? String ?? ""
+        body = everyData["body"] as? String ?? ""
+    }
 }
+
+// MARK: - Initialization Struct
+
+let anyDictionary: [String: Any] = [
+    "userId": 10,
+    "id": 10,
+    "title": "Greeting",
+    "body": "Hey, how are you?"
+]
+
+let testStruct = TestStruct(everyData: anyDictionary)
