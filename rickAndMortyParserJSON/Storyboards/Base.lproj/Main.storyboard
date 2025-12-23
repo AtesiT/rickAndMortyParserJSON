@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-U6-2aa">
-                                <rect key="frame" x="76.5" y="224.5" width="167.5" height="119.5"/>
+                                <rect key="frame" x="76.5" y="203" width="167.5" height="162"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uR-Km-C7H">
                                         <rect key="frame" x="17.5" y="0.0" width="132" height="34.5"/>
@@ -43,6 +43,14 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Fetch Data"/>
                                         <connections>
                                             <action selector="buttonFetchDataTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJZ-i3-n6c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laS-FW-DqJ">
+                                        <rect key="frame" x="34.5" y="127.5" width="98" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Post Data"/>
+                                        <connections>
+                                            <action selector="buttonPostDataTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRt-es-XLx"/>
                                         </connections>
                                     </button>
                                 </subviews>

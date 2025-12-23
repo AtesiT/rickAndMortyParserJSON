@@ -34,5 +34,18 @@ final class NetworkManager {
                 }
             }
     }
+    
+    func postData(to url: URL, data: TestStruct, completion: @escaping(Result<TestStruct, AFError>) -> Void) {
+        AF.request(url, method: .post, parameters: data, encoder: JSONParameterEncoder(encoder: JSONEncoder()))
+            .validate()
+            .responseDecodable(of: TestStruct.self) { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    completion(.success(value))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }
 
