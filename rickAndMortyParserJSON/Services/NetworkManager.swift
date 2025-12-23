@@ -19,4 +19,20 @@ final class NetworkManager {
                 }
             }
     }
+    
+    //MARK: - TEST THE FUNC
+    func fetchData(from url: URL, completion: @escaping(Result<JsonData, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    guard let dataDetails = value as? [String: Any] else {return}
+                    print(dataDetails)
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }
+

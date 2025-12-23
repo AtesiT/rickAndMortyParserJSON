@@ -34,3 +34,11 @@ struct CharacterData: Codable {
     let image: String
 }
 
+// MARK: - IT'S TO TEST THE FUNCTION
+
+struct TestStruct: Decodable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+}
